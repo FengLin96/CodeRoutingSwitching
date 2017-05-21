@@ -35,7 +35,9 @@ In the lab environment, the serial interface connecting to the serial cable end 
 #### Verify the gigabitethernet 0/0 interface setting
 
 ```cisco
-
+enable
+- 
+show interface gigabitethernet 0/0
 ```
 
 
