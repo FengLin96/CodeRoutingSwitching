@@ -53,6 +53,15 @@ copy running-config startup-config
 conf term
 vlan 10
 vlan 30
+
+interface f 0/11
+switchport access vlan 10
+no shutdown
+
+interface f 0/6
+switchport access vlan 30
+no shutdown
+
 interface f0/5
 switchport mode trunk
 end
@@ -73,8 +82,6 @@ no shutdown
 ```
 
 Verifying Subinterfaces![](/assets/Schermafbeelding 2017-05-24 om 00.01.11.png)Verify Switch Configuration![](/assets/VerifySwitchConfiguration.png)
-
-
 
 Multilayer Switch Inter-VLAN Routing
 
