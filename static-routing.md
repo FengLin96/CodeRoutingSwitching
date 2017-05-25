@@ -10,10 +10,9 @@ ip route 192.168.2.0 255.255.255.0 s0/0/0
 
 ---
 
-es on R1
+Configure a Next-Hop Static Route on R1
 
 ```
-ip route 172.16.1.0 255.255.255.0 172.16.2.2
 ip route 192.168.1.0 255.255.255.0 172.16.2.2
 ip route 192.168.2.0 255.255.255.0 172.16.2.2
 ```
@@ -53,9 +52,5 @@ ip route 0.0.0.0 0.0.0.0 172.16.2.2
 ipv6 unicast-routing
 ```
 
-
-
 Configure a fully specified static ipv6 route![](/assets/Schermafbeelding 2017-05-24 om 07.35.23.png)
-
-
 
