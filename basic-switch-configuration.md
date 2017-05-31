@@ -131,10 +131,51 @@ switchport portsecurity mac-address sticky ...(mac-adres) //statis mac adres toe
 To change the violation mode on a switch port, use the switchport port-security violation {protect | restrict | shutdown} interface configuration mode command
 ```
 
- Change the violation mode on a switch port
+Change the violation mode on a switch port
 
 ```
 switchport port-security violation {protect | restrict | shutdown}
+```
+
+**Port Security:  Verifying**
+
+Verify Port Security Settings
+
+```
+show port-security interface fastethernet 0/18
+```
+
+Verigying Port Security Sticky - Running Config
+
+```
+show run | begin FastEthernet 0/19
+```
+
+![](/assets/VerifyPortSecuritySticky.png)
+
+Verify Secure MAC Addresses
+
+```
+show port-security address
+
+show port-security address fa0/18 // of a speciaal interface
+```
+
+**Comfiguring NTP**
+
+```
+conf t
+
+ntp master 1 // If the NTP master cannot reach any clock with a lower stratum number, the system will claim to be synchronized at the configured stratum number, and other systems will be willing to synchronize to it using NTP.
+
+
+ntp server 10.1.1.1
+
+---------------------------------EXEC mode
+show ntp associations //This command will indicate the IP address of any peer devices that are synchronized to this peer, statically configured peers, and stratum number.
+
+
+show ntp status
 ```
 
 
