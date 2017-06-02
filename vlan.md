@@ -62,5 +62,22 @@ no vlan 20
 end
 ```
 
+**Configuring IEEE 802.1Q Trunk Links**
+
+![](/assets/VLANTrunk.png)
+
+```
+Configure terminal
+
+interface f0/1
+
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowd vlan 10,20
+
+end
+
+```
+
 
 
