@@ -76,7 +76,36 @@ switchport trunk native vlan 99
 switchport trunk allowd vlan 10,20
 
 end
+```
 
+Een vlan toestaan via bepaalde interface data sturen
+
+```
+conf t
+
+interface f0/3
+
+switchport trunk allowed vlan 10,20,99 // vlan10,20,99 kunnen nu via f0/3 data sturen
+```
+
+**Initial DTP Configuration**
+
+Om trunking van een Switch van Cisco aan een apparaat toe te laten dat geen DTP steunt
+
+```
+1. switchport mide trunk
+
+switchport nonegotiate
+```
+
+**PVLAN Edge**
+
+```
+interface g0/1
+
+switchport protected
+
+end
 ```
 
 
