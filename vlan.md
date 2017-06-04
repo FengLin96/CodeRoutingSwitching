@@ -72,7 +72,7 @@ Configure terminal
 interface f0/1
 
 switchport mode trunk
-switchport trunk native vlan 99
+switchport trunk native vlan 99 // to create a native vlan. The point that is really important is that a native vlan is the vlan that a switch puts all incoming frames that aren't tagged.
 switchport trunk allowd vlan 10,20
 
 end
