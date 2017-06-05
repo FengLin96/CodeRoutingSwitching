@@ -81,7 +81,9 @@ interface g0/0
 no shutdown
 ```
 
-Verifying Subinterfaces![](/assets/Schermafbeelding 2017-05-24 om 00.01.11.png)Verify Switch Configuration![](/assets/VerifySwitchConfiguration.png)
+Verifying Subinterfaces![](/assets/Schermafbeelding 2017-05-24 om 00.01.11.png)
+
+Verify Switch Configuration![](/assets/VerifySwitchConfiguration.png)
 
 Multilayer Switch Inter-VLAN Routing
 
@@ -97,6 +99,19 @@ no shutdown
 interface vlan 20
 ip address 10.20.1.1 255.255.255.0
 no shutdown
+```
+
+**Catalyst 2960 static Routing**
+
+The sdmlanbase-routingtemplatecan be enabled to allow the switch to route between VLANsand to support static routing
+
+```
+show sdm prefer// verify which template is in use
+
+conf t
+
+sdm prefer ? //Change SDM template
+sdm prefer lanbase routing //
 ```
 
 
