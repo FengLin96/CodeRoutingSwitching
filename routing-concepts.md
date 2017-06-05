@@ -42,5 +42,27 @@ enable
 show interface gigabitethernet 0/0
 ```
 
+---
+
+**Default static route \( beetje als default gateway op host\)**
+
+```
+ip route 0.0.0.0 0.0.0.0 Serial0/0/0 
+```
+
+the configuration of two static routes from R2 to reach the two LANs on R1.
+
+![](/assets/Schermafbeelding 2017-06-05 om 01.42.32.png)
+
+```
+conf t
+
+ip route 192.168.10.0 255.255.255.0 s0/0/0
+
+ip route 192.168.11.0 255.255.255.0 209.165.200.225 // gaat ook met ip adres
+
+exit
+```
+
 
 
